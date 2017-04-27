@@ -145,84 +145,6 @@
       <div class="body-wrap">
         
   
-    <article id="post-README" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Datashader-Examples"><a href="#Datashader-Examples" class="headerlink" title="Datashader Examples"></a>Datashader Examples</h1><p>A variety of example notebooks and applications are maintained in the<br>examples/ subdirectory of the git repository, and these will be<br>installed somewhere on your local system when you install datashader.<br>To get a copy of the examples in your own directory so that you can<br>run and edit them, you can run these commands in your terminal:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. <span class="built_in">cd</span> ~</div><div class="line">2. python -c <span class="string">"from datashader import examples ; examples('datashader-examples')"</span></div><div class="line">3. <span class="built_in">cd</span> datashader-examples</div><div class="line">4. python download_sample_data.py</div></pre></td></tr></table></figure>
-<p>Steps 1-3 steps will give you a copy of the notebooks and apps, and<br>step 4 will download various datasets used by them.  The total<br>download size is currently about 2.5GB to transfer, requiring about<br>7.5GB on disk when unpacked, which can take some time depending on the<br>speed of your connection.  The files involved are specified in the<br>text file <code>datasets.yml</code> that was copied to your directory in step 3,<br>and instead of step 4 you can download each file individually if you<br>prefer.</p>
-<p>The “Census” example data is the largest file and should be the last<br>thing to be downloaded, so you should be able to start running all of<br>the other examples while that one completes.</p>
-<p>Datashader itself is independent of other plotting libraries, but most<br>of the examples also require <code>bokeh</code> (version 0.12 or higher) to be<br>installed.  Bokeh is available through either conda or pip:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda install bokeh</div></pre></td></tr></table></figure>
-<p>or<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install bokeh</div></pre></td></tr></table></figure></p>
-<p>Specific examples may have other dependencies as listed below.</p>
-<h2 id="Dashboard"><a href="#Dashboard" class="headerlink" title="Dashboard"></a>Dashboard</h2><p>An example interactive dashboard using<br><a href="http://bokeh.pydata.org/en/latest/docs/user_guide/server.html" target="_blank" rel="external">bokeh server</a><br>integrated with a datashading pipeline.  Requires webargs and (on Python2)<br>fastcache:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip install webargs</div><div class="line">conda install fastcache</div></pre></td></tr></table></figure>
-<p>To start, launch it with one of the supported datasets specified:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python dashboard/dashboard.py -c dashboard/nyc_taxi.yml</div><div class="line">python dashboard/dashboard.py -c dashboard/census.yml</div></pre></td></tr></table></figure>
-<p>The ‘.yml’ configuration file sets up the dashboard to use one of the<br>datasets downloaded above. You can write similar configuration files<br>for working with other datasets of your own, while adding features to<br><code>dashboard.py</code> itself if needed.</p>
-<p>If you have less than 16GB of RAM on your machine, you will want to<br>add the “-o” option before “-c” to tell it to work out of core instead<br>of loading all data into memory, though doing so will make interactive<br>use substantially slower than if sufficient memory were available.</p>
-<p>To launch multiple dashboards at once, you’ll need to add “-p 5001”<br>(etc.) to select a unique port number for the web page to use for<br>communicating with the Bokeh server.</p>
-<h2 id="Notebooks"><a href="#Notebooks" class="headerlink" title="Notebooks"></a>Notebooks</h2><p>Most of the examples are in the form of runnable Jupyter notebooks. Copies of<br>these with all the images and output included are hosted at <a href="https://anaconda.org/jbednar/notebooks" target="_blank" rel="external">Anaconda<br>Cloud</a>. To run these notebooks on your<br>own system, install and start up a Jupyter notebook server:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda install jupyter</div></pre></td></tr></table></figure>
-<p>or<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install jupyter</div></pre></td></tr></table></figure></p>
-<p>To start:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jupyter notebook</div></pre></td></tr></table></figure>
-<p><strong><a href="https://anaconda.org/jbednar/plotting_pitfalls/notebook" target="_blank" rel="external">plotting_pitfalls</a></strong></p>
-<p>Motivation for the ideas behind datashader. Shows perceptual problems<br>that plotting in a conventional way can lead to. Re-running it locally<br>is usually not required, since the filled out version at the link<br>above has the full data. If you do wish to re-run it, you will need to<br>install the HoloViews package:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda install -c ioam holoviews</div></pre></td></tr></table></figure>
-<p><strong><a href="https://anaconda.org/jbednar/pipeline/notebook" target="_blank" rel="external">pipeline</a></strong></p>
-<p>Step-by-step documentation for each of the stages in the datashader<br>pipeline, giving an overview of how to configure and use each<br>component provided.  Most useful when you have looked at the other<br>example dashboards and the notebooks below, and are ready to start<br>working with your own data.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda install -c ioam holoviews</div></pre></td></tr></table></figure>
-<p><strong><a href="https://anaconda.org/jbednar/nyc_taxi/notebook" target="_blank" rel="external">nyc_taxi</a></strong></p>
-<p>Making geographical plots, with and without datashader, using trip data originally from<br>the <a href="http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml" target="_blank" rel="external">NYC Taxi dataset</a><br>but preprocessed using <code>taxi_preprocessing_example.py</code> for convenience.</p>
-<p><strong><a href="https://anaconda.org/jbednar/census/notebook" target="_blank" rel="external">census</a></strong></p>
-<p>Plotting the <a href="http://www.coopercenter.org/demographics/Racial-Dot-Map" target="_blank" rel="external">2010 US Census data</a>,<br>both to show population density and to show racial categories.  Requires pytables:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda install pytables</div></pre></td></tr></table></figure>
-<p>There is also a [version that lets you compare congressional districts with racial categories]<br>(<a href="https://anaconda.org/jbednar/census-hv-dask" target="_blank" rel="external">https://anaconda.org/jbednar/census-hv-dask</a>), which has its own installation requirements<br>because of overlaying shape files.</p>
-<p><strong><a href="https://anaconda.org/jbednar/nyc_taxi-nongeo/notebook" target="_blank" rel="external">nyc_taxi-nongeo</a></strong></p>
-<p>Scatterplots for non-geographic variables in the taxi dataset.</p>
-<p><strong><a href="https://anaconda.org/jbednar/tseries/notebook" target="_blank" rel="external">tseries</a></strong></p>
-<p>Plotting large or multiple plots of time series (curve) data.</p>
-<p><strong><a href="https://anaconda.org/jbednar/trajectory/notebook" target="_blank" rel="external">trajectory</a></strong> and<br><strong><a href="https://anaconda.org/jbednar/opensky/notebook" target="_blank" rel="external">opensky</a></strong></p>
-<p>Plotting a 2D trajectory, either for a single long<br>(<a href="https://anaconda.org/jbednar/trajectory/notebook" target="_blank" rel="external">random walk</a>) or a<br><a href="https://anaconda.org/jbednar/opensky/notebook" target="_blank" rel="external">large database of flight paths</a>.</p>
-<p><strong><a href="https://anaconda.org/jbednar/landsat/notebook" target="_blank" rel="external">landsat</a></strong> and<br><strong><a href="https://anaconda.org/jbednar/race_elevation/notebook" target="_blank" rel="external">race_elevation</a></strong></p>
-<p>Combining raster data with scatterpoint data, using the<br>census data on race along with gridded elevation data for Austin, TX.<br>Requires rasterio (<code>conda install rasterio krb5</code>).</p>
-<p><strong><a href="https://anaconda.org/jbednar/osm/notebook" target="_blank" rel="external">osm</a></strong></p>
-<p>Plotting the 2.7 billion gps coordinates made available by <a href="https://blog.openstreetmap.org/2012/04/01/bulk-gps-point-data/" target="_blank" rel="external">open street<br>map</a>. This<br>dataset is not provided by the download script, and the notebook is only included to<br>demonstrate working with a large dataset. Requires <code>dask</code> for<br>out-of-core operation and <code>castra</code> for the fast file format.  The run<br>notebook can be viewed at<br><a href="https://anaconda.org/jbednar/osm/notebook" target="_blank" rel="external">anaconda.org</a>.</p>
-<p><strong><a href="https://anaconda.org/defusco/amz_centers/notebook" target="_blank" rel="external">Amazon.com center distance</a></strong></p>
-<p>Cities in the USA colored by their distance to the nearest Amazon.com<br>distribution center.</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/12/20/README/" class="archive-article-date">
-  	<time datetime="2016-12-20T12:59:31.079Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-20</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
     <article id="post-重回匆匆，又回忙碌" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -395,7 +317,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Water Drop
+    		&copy; 2017 Water Drop
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
