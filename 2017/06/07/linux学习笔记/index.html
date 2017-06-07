@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/06/07/linux学习笔记/index.html">
 <meta property="og:site_name" content="Allen">
 <meta property="og:description" content="#基于centos的linux系统运维">
-<meta property="og:updated_time" content="2017-06-07T14:31:30.710Z">
+<meta property="og:updated_time" content="2017-06-07T14:36:47.074Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux学习笔记">
 <meta name="twitter:description" content="#基于centos的linux系统运维">
@@ -150,19 +150,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>#基于centos的linux系统运维<br><a id="more"></a></p>
-<p>###远程访问系统<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssh -NL 2222:192.168.1.2:22 guest@1.2.3.4 -p 8080 #建立通道1</div><div class="line">ssh root@localhost -p 2222 #登录A</div></pre></td></tr></table></figure></p>
-<p>###退出系统<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">exit</div></pre></td></tr></table></figure></p>
-<p>###退出操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">q</div></pre></td></tr></table></figure></p>
-<p>##安装及卸载</p>
-<p>##安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install [name] 或 rpm [name]</div></pre></td></tr></table></figure></p>
-<p>##卸载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum erase [name] 或 rpm -e [name]</div></pre></td></tr></table></figure></p>
-<p>##文件及文件夹</p>
-<p>###基本操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd 路径  #打开文件夹</div><div class="line">cd ..   #回到根目录</div><div class="line">ls -l   #显示文件夹中所有文件、文件夹</div></pre></td></tr></table></figure></p>
-<p>###zip命令：打包和压缩文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">zip [options] [file1 file2 ...]</div></pre></td></tr></table></figure></p>
-<p>-d：删除压缩文件内指定的文件<br><br>-g：将文件压缩后附加到已有的压缩文件之后<br><br>-j：只保存文件名称及其内容<br><br>-m：删除被压缩文件的原文件<br><br>-0：将压缩文件时间设置为与最新文件的时间相同<br><br>-r：以递归的方式指定目录下的文件，即子文件<br><br><br><br>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">zip -r text.zip text</div></pre></td></tr></table></figure></p>
-<p>###unzip命令：解压.zip文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">unzip [option] [file(s)]</div></pre></td></tr></table></figure></p>
-<p>-c：将解压缩的结果显示到屏幕上，并对字符做适当的转换。<br><br>-f(file)：更新现有的文件。<br><br>-l(list)：显示压缩文件内包含的文件。<br><br>-a：对文本文件进行必要的字符转换。<br><br>-C：压缩文件时忽略文件名的大小写。<br><br>o：没有任何提示下直接覆盖现有的同名文件。<br><br>-n：解压缩时不覆盖原有的文件，与-o选项的作用相反。<br><br><br><br>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">unzip text.zip</div></pre></td></tr></table></figure></p>
-<p>###文件上传下载</p>
+<p></p><h3>远程访问系统</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssh -NL 2222:192.168.1.2:22 guest@1.2.3.4 -p 8080 #建立通道1</div><div class="line">ssh root@localhost -p 2222 #登录A</div></pre></td></tr></table></figure><p></p>
+<p></p><h3>退出系统</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">exit</div></pre></td></tr></table></figure><p></p>
+<p></p><h3>退出操作</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">q</div></pre></td></tr></table></figure><p></p>
+<p></p><h2>安装及卸载</h2><p></p>
+<p></p><h3>安装</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install [name] 或 rpm [name]</div></pre></td></tr></table></figure><p></p>
+<p></p><h3>卸载</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum erase [name] 或 rpm -e [name]</div></pre></td></tr></table></figure><p></p>
+<p></p><h2>文件及文件夹</h2><p></p>
+<p></p><h3>基本操作</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd 路径  #打开文件夹</div><div class="line">cd ..   #回到根目录</div><div class="line">ls -l   #显示文件夹中所有文件、文件夹</div></pre></td></tr></table></figure><p></p>
+<p></p><h3>zip命令：打包和压缩文件</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">zip [options] [file1 file2 ...]</div></pre></td></tr></table></figure><p></p>
+<p>-d：删除压缩文件内指定的文件。<br>-g：将文件压缩后附加到已有的压缩文件之后。<br>-j：只保存文件名称及其内容。<br>-m：删除被压缩文件的原文件。<br>-0：将压缩文件时间设置为与最新文件的时间相同。<br>-r：以递归的方式指定目录下的文件，即子文件。<br><br><br>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">zip -r text.zip text</div></pre></td></tr></table></figure></p>
+<p></p><h3>unzip命令：解压.zip文件</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">unzip [option] [file(s)]</div></pre></td></tr></table></figure><p></p>
+<p>-c：将解压缩的结果显示到屏幕上，并对字符做适当的转换。<br>-f(file)：更新现有的文件。<br>-l(list)：显示压缩文件内包含的文件。<br>-a：对文本文件进行必要的字符转换。<br>-C：压缩文件时忽略文件名的大小写。<br>o：没有任何提示下直接覆盖现有的同名文件。<br>-n：解压缩时不覆盖原有的文件，与-o选项的作用相反。<br><br><br>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">unzip text.zip</div></pre></td></tr></table></figure></p>
+<p></p><h3>文件上传下载</h3><p></p>
 <pre><code>1、从服务器上下载文件
 scp username@servername:/path/filename /var/www/local_dir（本地目录）
 2、上传本地文件到服务器
