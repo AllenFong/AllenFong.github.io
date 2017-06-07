@@ -4,14 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: 随笔 | Allen</title>
+  <title>linux学习笔记 | Allen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Allen">
-<meta property="og:url" content="http://yoursite.com/tags/随笔/index.html">
+  <meta name="description" content="#基于centos的linux系统运维">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux学习笔记">
+<meta property="og:url" content="http://yoursite.com/2017/06/07/linux学习笔记/index.html">
 <meta property="og:site_name" content="Allen">
+<meta property="og:description" content="#基于centos的linux系统运维">
+<meta property="og:updated_time" content="2017-06-07T12:33:13.089Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Allen">
+<meta name="twitter:title" content="linux学习笔记">
+<meta name="twitter:description" content="#基于centos的linux系统运维">
   
     <link rel="alternative" href="/atom.xml" title="Allen" type="application/atom+xml">
   
@@ -127,54 +131,95 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-linux学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/16/重回匆匆，又回忙碌/" class="archive-article-date">
-  	<time datetime="2016-10-16T14:27:51.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/16/重回匆匆，又回忙碌/">重回匆匆，又回忙碌</a>
+    <h1 class="article-title" itemprop="name">
+      linux学习笔记
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#基于centos的linux系统运维<br><a id="more"></a></p>
+<p>###远程访问系统<br>    ssh -NL 2222:192.168.1.2:22 guest@1.2.3.4 -p 8080 #建立通道1<br>    ssh root@localhost -p 2222 #登录A</p>
+<p>###退出系统<br>    exit</p>
+<p>###退出操作<br>    q</p>
+<p>##安装及卸载</p>
+<p>##安装<br>    yum install [name] 或 rpm [name]</p>
+<p>##卸载<br>    yum erase [name] 或 rpm -e [name]</p>
+<p>##文件及文件夹</p>
+<p>###基本操作<br>    cd 路径  #打开文件夹<br>    cd ..   #回到根目录<br>    ls -l   #显示文件夹中所有文件、文件夹</p>
+<p>###zip命令：打包和压缩文件<br>    zip [options] [file1 file2 …]<br>-d：删除压缩文件内指定的文件<br><br>-g：将文件压缩后附加到已有的压缩文件之后<br><br>-j：只保存文件名称及其内容<br><br>-m：删除被压缩文件的原文件<br><br>-0：将压缩文件时间设置为与最新文件的时间相同<br><br>-r：以递归的方式指定目录下的文件，即子文件<br><br><br><br>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">zip -r text.zip text</div></pre></td></tr></table></figure></p>
+<p>###unzip命令：解压.zip文件<br>    unzip [option] [file(s)]<br>-c：将解压缩的结果显示到屏幕上，并对字符做适当的转换。<br><br>-f(file)：更新现有的文件。<br><br>-l(list)：显示压缩文件内包含的文件。<br><br>-a：对文本文件进行必要的字符转换。<br><br>-C：压缩文件时忽略文件名的大小写。<br><br>o：没有任何提示下直接覆盖现有的同名文件。<br><br>-n：解压缩时不覆盖原有的文件，与-o选项的作用相反。<br><br><br><br>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">unzip text.zip</div></pre></td></tr></table></figure></p>
+<p>###文件上传下载<br>    1、从服务器上下载文件<br>    scp username@servername:/path/filename /var/www/local_dir（本地目录）<br>    2、上传本地文件到服务器<br>    scp /path/filename username@servername:/path<br>    3、从服务器下载整个目录<br>    scp -r username@servername:/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）<br>    4、上传目录到服务器<br>    scp  -r local_dir username@servername:remote_dir   </p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/06/07/linux学习笔记/" class="archive-article-date">
+  	<time datetime="2017-06-07T10:40:46.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-07</time>
+</a>
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/05/墨卡托投影/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">墨卡托投影</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
 
 
       </div>
@@ -197,9 +242,9 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/"
