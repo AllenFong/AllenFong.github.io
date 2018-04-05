@@ -4,20 +4,23 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>基于keras的神经网络可视化 | Allen</title>
+  <title>openCV实现简单人脸检测 | Allen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ANN Visualizer 是一个很不错的 Python 库，兼容 Keras，它使用 Python 的 graphviz 库来创建开发人员正在构建的神经网络的可视化图形。">
+  <meta name="description" content="使用openCv自带的分类器实现人脸检测">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于keras的神经网络可视化">
-<meta property="og:url" content="http://yoursite.com/2018/04/05/基于keras的神经网络可视化/index.html">
+<meta property="og:title" content="openCV实现简单人脸检测">
+<meta property="og:url" content="http://yoursite.com/2018/04/05/openCV实现简单人脸检测/index.html">
 <meta property="og:site_name" content="Allen">
-<meta property="og:description" content="ANN Visualizer 是一个很不错的 Python 库，兼容 Keras，它使用 Python 的 graphviz 库来创建开发人员正在构建的神经网络的可视化图形。">
-<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/006aJXlsgy1fq1mkhxsskj311m0mmtcu.jpg">
-<meta property="og:updated_time" content="2018-04-05T03:44:40.211Z">
+<meta property="og:description" content="使用openCv自带的分类器实现人脸检测">
+<meta property="og:image" content="http://wx3.sinaimg.cn/mw690/006aJXlsgy1fq250jpq6yj30nn0f4dth.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/006aJXlsgy1fq250n4k5sj30ku0fkdns.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/006aJXlsgy1fq250s8imgj30hz0csamd.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/006aJXlsgy1fq251i88mxj30yg0dunjx.jpg">
+<meta property="og:updated_time" content="2018-04-05T14:20:15.683Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于keras的神经网络可视化">
-<meta name="twitter:description" content="ANN Visualizer 是一个很不错的 Python 库，兼容 Keras，它使用 Python 的 graphviz 库来创建开发人员正在构建的神经网络的可视化图形。">
-<meta name="twitter:image" content="http://wx1.sinaimg.cn/mw690/006aJXlsgy1fq1mkhxsskj311m0mmtcu.jpg">
+<meta name="twitter:title" content="openCV实现简单人脸检测">
+<meta name="twitter:description" content="使用openCv自带的分类器实现人脸检测">
+<meta name="twitter:image" content="http://wx3.sinaimg.cn/mw690/006aJXlsgy1fq250jpq6yj30nn0f4dth.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Allen" type="application/atom+xml">
   
@@ -133,7 +136,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-基于keras的神经网络可视化" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-openCV实现简单人脸检测" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -143,7 +146,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      基于keras的神经网络可视化
+      openCV实现简单人脸检测
     </h1>
   
 
@@ -151,22 +154,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>ANN Visualizer 是一个很不错的 Python 库，兼容 Keras，它使用 Python 的 graphviz 库来创建开发人员正在构建的神经网络的可视化图形。<br><a id="more"></a><br><a href="https://github.com/Prodicode/ann-visualizer" target="_blank" rel="external">GitHub</a><br>安装前要先安装<a href="http://www.graphviz.org/download/" target="_blank" rel="external">graphviz</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#安装python拓展包</div><div class="line">pip install graphviz</div><div class="line">#安装</div><div class="line">pip install ann_visualizer</div></pre></td></tr></table></figure></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">from ann_visualizer.visualize import ann_viz;</div><div class="line">#Build your model here</div><div class="line">ann_viz(model)</div></pre></td></tr></table></figure>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">#coding=utf-8</div><div class="line">import keras;</div><div class="line">from keras.models import Sequential;</div><div class="line">from keras.layers import Dense;</div><div class="line"></div><div class="line">network = Sequential();</div><div class="line">        #隐藏层1，输入层</div><div class="line">network.add(Dense(units=6,</div><div class="line">                  activation=&apos;relu&apos;,</div><div class="line">                  kernel_initializer=&apos;uniform&apos;,</div><div class="line">                  input_dim=11));</div><div class="line"></div><div class="line">        #隐藏层2</div><div class="line">network.add(Dense(units=6,</div><div class="line">                  activation=&apos;relu&apos;,</div><div class="line">                  kernel_initializer=&apos;uniform&apos;));</div><div class="line">        #输出层</div><div class="line">network.add(Dense(units=1,</div><div class="line">                  activation=&apos;sigmoid&apos;,</div><div class="line">                  kernel_initializer=&apos;uniform&apos;));</div><div class="line"></div><div class="line">from ann_visualizer.visualize import ann_viz;</div><div class="line"></div><div class="line">ann_viz(network, title=&quot;&quot;);</div></pre></td></tr></table></figure>
-<p>output<br><img src="http://wx1.sinaimg.cn/mw690/006aJXlsgy1fq1mkhxsskj311m0mmtcu.jpg" alt="output"></p>
+        <p>使用openCv自带的分类器实现人脸检测<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">import cv2</div><div class="line">import sys</div><div class="line"> </div><div class="line">img = cv2.imread(sys.argv[1])</div><div class="line"> </div><div class="line"># 加载分类器</div><div class="line">face_haar = cv2.CascadeClassifier(&quot;D:/Program Files/opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml&quot;)</div><div class="line">eye_haar = cv2.CascadeClassifier(&quot;D:/Program Files/opencv/sources/data/haarcascades/haarcascade_eye.xml&quot;)</div><div class="line"># 把图像转为黑白图像</div><div class="line">gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</div><div class="line"># 检测图像中的所有脸</div><div class="line">faces = face_haar.detectMultiScale(gray_img, 1.3, 5)</div><div class="line">for face_x,face_y,face_w,face_h in faces:</div><div class="line">	cv2.rectangle(img, (face_x, face_y), (face_x+face_w, face_y+face_h), (0,255,0), 2)</div><div class="line">    # 眼长在脸上</div><div class="line">	roi_gray_img = gray_img[face_y:face_y+face_h, face_x:face_x+face_w]</div><div class="line">	roi_img = img[face_y:face_y+face_h, face_x:face_x+face_w]</div><div class="line">	eyes = eye_haar.detectMultiScale(roi_gray_img, 1.3, 5)</div><div class="line">	for eye_x,eye_y,eye_w,eye_h in eyes:</div><div class="line">	    cv2.rectangle(roi_img, (eye_x,eye_y), (eye_x+eye_w, eye_y+eye_h), (255,0,0), 2)</div><div class="line"> </div><div class="line">cv2.imshow(&apos;img&apos;, img)</div><div class="line">cv2.waitKey(0)</div><div class="line"> </div><div class="line">cv2.destroyAllWindows()</div></pre></td></tr></table></figure></p>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="http://wx3.sinaimg.cn/mw690/006aJXlsgy1fq250jpq6yj30nn0f4dth.jpg" alt="1"></p>
+<hr>
+<p><img src="http://wx1.sinaimg.cn/mw690/006aJXlsgy1fq250n4k5sj30ku0fkdns.jpg" alt="2"></p>
+<hr>
+<p><img src="http://wx1.sinaimg.cn/mw690/006aJXlsgy1fq250s8imgj30hz0csamd.jpg" alt="3"></p>
+<hr>
+<p><img src="http://wx2.sinaimg.cn/mw690/006aJXlsgy1fq251i88mxj30yg0dunjx.jpg" alt="4"></p>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2018/04/05/基于keras的神经网络可视化/" class="archive-article-date">
-  	<time datetime="2018-04-05T03:09:31.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-04-05</time>
+      <a href="/2018/04/05/openCV实现简单人脸检测/" class="archive-article-date">
+  	<time datetime="2018-04-05T13:36:31.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-04-05</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/">AI</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 	</div>
 
       
@@ -179,18 +186,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/05/openCV实现简单人脸检测/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          openCV实现简单人脸检测
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/02/26/css实现底部导航不遮挡页面的主体内容/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">css实现底部导航不遮挡页面的主体内容</div>
+    <a href="/2018/04/05/基于keras的神经网络可视化/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基于keras的神经网络可视化</div>
       <i class="icon-circle-right"></i>
     </a>
   

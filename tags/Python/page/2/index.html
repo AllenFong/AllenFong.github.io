@@ -4,20 +4,14 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>基于keras的神经网络可视化 | Allen</title>
+  <title>Tag: Python | Allen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ANN Visualizer 是一个很不错的 Python 库，兼容 Keras，它使用 Python 的 graphviz 库来创建开发人员正在构建的神经网络的可视化图形。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="基于keras的神经网络可视化">
-<meta property="og:url" content="http://yoursite.com/2018/04/05/基于keras的神经网络可视化/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Allen">
+<meta property="og:url" content="http://yoursite.com/tags/Python/page/2/index.html">
 <meta property="og:site_name" content="Allen">
-<meta property="og:description" content="ANN Visualizer 是一个很不错的 Python 库，兼容 Keras，它使用 Python 的 graphviz 库来创建开发人员正在构建的神经网络的可视化图形。">
-<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/006aJXlsgy1fq1mkhxsskj311m0mmtcu.jpg">
-<meta property="og:updated_time" content="2018-04-05T03:44:40.211Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于keras的神经网络可视化">
-<meta name="twitter:description" content="ANN Visualizer 是一个很不错的 Python 库，兼容 Keras，它使用 Python 的 graphviz 库来创建开发人员正在构建的神经网络的可视化图形。">
-<meta name="twitter:image" content="http://wx1.sinaimg.cn/mw690/006aJXlsgy1fq1mkhxsskj311m0mmtcu.jpg">
+<meta name="twitter:title" content="Allen">
   
     <link rel="alternative" href="/atom.xml" title="Allen" type="application/atom+xml">
   
@@ -133,96 +127,58 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-基于keras的神经网络可视化" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      基于keras的神经网络可视化
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/06/08/包管理工具Anaconda/" class="archive-article-date">
+  	<time datetime="2017-06-08T00:02:21.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-08</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/06/08/包管理工具Anaconda/">包管理工具Anaconda</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>ANN Visualizer 是一个很不错的 Python 库，兼容 Keras，它使用 Python 的 graphviz 库来创建开发人员正在构建的神经网络的可视化图形。<br><a id="more"></a><br><a href="https://github.com/Prodicode/ann-visualizer" target="_blank" rel="external">GitHub</a><br>安装前要先安装<a href="http://www.graphviz.org/download/" target="_blank" rel="external">graphviz</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#安装python拓展包</div><div class="line">pip install graphviz</div><div class="line">#安装</div><div class="line">pip install ann_visualizer</div></pre></td></tr></table></figure></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">from ann_visualizer.visualize import ann_viz;</div><div class="line">#Build your model here</div><div class="line">ann_viz(model)</div></pre></td></tr></table></figure>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">#coding=utf-8</div><div class="line">import keras;</div><div class="line">from keras.models import Sequential;</div><div class="line">from keras.layers import Dense;</div><div class="line"></div><div class="line">network = Sequential();</div><div class="line">        #隐藏层1，输入层</div><div class="line">network.add(Dense(units=6,</div><div class="line">                  activation=&apos;relu&apos;,</div><div class="line">                  kernel_initializer=&apos;uniform&apos;,</div><div class="line">                  input_dim=11));</div><div class="line"></div><div class="line">        #隐藏层2</div><div class="line">network.add(Dense(units=6,</div><div class="line">                  activation=&apos;relu&apos;,</div><div class="line">                  kernel_initializer=&apos;uniform&apos;));</div><div class="line">        #输出层</div><div class="line">network.add(Dense(units=1,</div><div class="line">                  activation=&apos;sigmoid&apos;,</div><div class="line">                  kernel_initializer=&apos;uniform&apos;));</div><div class="line"></div><div class="line">from ann_visualizer.visualize import ann_viz;</div><div class="line"></div><div class="line">ann_viz(network, title=&quot;&quot;);</div></pre></td></tr></table></figure>
-<p>output<br><img src="http://wx1.sinaimg.cn/mw690/006aJXlsgy1fq1mkhxsskj311m0mmtcu.jpg" alt="output"></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2018/04/05/基于keras的神经网络可视化/" class="archive-article-date">
-  	<time datetime="2018-04-05T03:09:31.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-04-05</time>
-</a>
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/">AI</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 	</div>
 
-      
+          
 
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/04/05/openCV实现简单人脸检测/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          openCV实现简单人脸检测
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/02/26/css实现底部导航不遮挡页面的主体内容/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">css实现底部导航不遮挡页面的主体内容</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    </div></section>
   
-</nav>
 
-
-
-
-<div class="share_jia">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">Share to: &nbsp; </span>
-		<a class="jiathis_button_facebook"></a> 
-	    <a class="jiathis_button_twitter"></a>
-	    <a class="jiathis_button_plus"></a> 
-	    <a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
-
-
-
-
-
-
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/tags/Python/">&laquo; Prev</a><a class="page-number" href="/tags/Python/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 
 
       </div>
@@ -245,9 +201,9 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/"
