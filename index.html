@@ -129,6 +129,458 @@
       <div class="body-wrap">
         
   
+    <article id="post-基于keras的神经网络可视化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/05/基于keras的神经网络可视化/">基于keras的神经网络可视化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ANN Visualizer 是一个很不错的 Python 库，兼容 Keras，它使用 Python 的 graphviz 库来创建开发人员正在构建的神经网络的可视化图形。<br><a href="https://github.com/Prodicode/ann-visualizer" target="_blank" rel="external">GitHub</a><br>安装前要先安装<a href="http://www.graphviz.org/download/" target="_blank" rel="external">graphviz</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#安装python拓展包</div><div class="line">pip install graphviz</div><div class="line">#安装</div><div class="line">pip install ann_visualizer</div></pre></td></tr></table></figure></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">from ann_visualizer.visualize import ann_viz;</div><div class="line">#Build your model here</div><div class="line">ann_viz(model)</div></pre></td></tr></table></figure>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">#coding=utf-8</div><div class="line">import keras;</div><div class="line">from keras.models import Sequential;</div><div class="line">from keras.layers import Dense;</div><div class="line"></div><div class="line">network = Sequential();</div><div class="line">        #隐藏层1，输入层</div><div class="line">network.add(Dense(units=6,</div><div class="line">                  activation=&apos;relu&apos;,</div><div class="line">                  kernel_initializer=&apos;uniform&apos;,</div><div class="line">                  input_dim=11));</div><div class="line"></div><div class="line">        #隐藏层2</div><div class="line">network.add(Dense(units=6,</div><div class="line">                  activation=&apos;relu&apos;,</div><div class="line">                  kernel_initializer=&apos;uniform&apos;));</div><div class="line">        #输出层</div><div class="line">network.add(Dense(units=1,</div><div class="line">                  activation=&apos;sigmoid&apos;,</div><div class="line">                  kernel_initializer=&apos;uniform&apos;));</div><div class="line"></div><div class="line">from ann_visualizer.visualize import ann_viz;</div><div class="line"></div><div class="line">ann_viz(network, title=&quot;&quot;);</div></pre></td></tr></table></figure>
+<p>output<br><img src="http://wx1.sinaimg.cn/mw690/006aJXlsgy1fq1mkhxsskj311m0mmtcu.jpg" alt="output"></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/04/05/基于keras的神经网络可视化/" class="archive-article-date">
+  	<time datetime="2018-04-05T03:09:31.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-04-05</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/">AI</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-css实现底部导航不遮挡页面的主体内容" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/26/css实现底部导航不遮挡页面的主体内容/">css实现底部导航不遮挡页面的主体内容</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>body使用padding-bottom。值为底部导航的高度。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2018/02/26/css实现底部导航不遮挡页面的主体内容/" class="archive-article-date">
+  	<time datetime="2018-02-26T05:07:50.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-02-26</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-python实现简单进度条" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/16/python实现简单进度条/">python实现简单进度条</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/11/16/python实现简单进度条/" class="archive-article-date">
+  	<time datetime="2017-11-16T15:08:30.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-11-16</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-python程序运行时间计算" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/16/python程序运行时间计算/">python程序运行时间计算</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.csdn.net/chichoxian/article/details/53108365" target="_blank" rel="external">计算Python的代码块或程序的运行时间</a></p>
+<p><a href="https://www.cnblogs.com/rookie-c/p/5827694.html" target="_blank" rel="external">计算Python的代码块或程序的运行时间</a></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/11/16/python程序运行时间计算/" class="archive-article-date">
+  	<time datetime="2017-11-16T15:07:36.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-11-16</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Python的字符串相似度检测" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/16/Python的字符串相似度检测/">Python的字符串相似度检测</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://segmentfault.com/a/1190000002915566" target="_blank" rel="external">Python的字符串相似度检测</a></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/11/16/Python的字符串相似度检测/" class="archive-article-date">
+  	<time datetime="2017-11-16T15:05:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-11-16</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-python程序代码覆盖率统计工具：Coverage-py" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/16/python程序代码覆盖率统计工具：Coverage-py/">python程序代码覆盖率统计工具：Coverage.py</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://mp.weixin.qq.com/s/TqzSp8XdKMyGfpo3o9kjmg" target="_blank" rel="external">python程序代码覆盖率统计工具：Coverage.py</a></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/11/16/python程序代码覆盖率统计工具：Coverage-py/" class="archive-article-date">
+  	<time datetime="2017-11-16T14:53:49.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-11-16</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-RSA算法的加密和解密" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/26/RSA算法的加密和解密/">RSA算法的加密和解密</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.csdn.net/dbs1215/article/details/48953589" target="_blank" rel="external">带你彻底理解RSA算法原理</a></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/10/26/RSA算法的加密和解密/" class="archive-article-date">
+  	<time datetime="2017-10-26T06:09:33.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-10-26</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/信息安全/">信息安全</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2017-8-27" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/27/2017-8-27/">2017/8/27</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>今天是来学校的第二天，在家‘呆’了两个月的时间，提前几天来了学校。因为临幸前妈妈的教诲，决心要过积极健康的生活。早晨6:15起床到南湖公园跑了一圈，回寝室晒被子，步行去图书馆。
+
+下午回到寝室，说心里话，没有学习下去，可能是刚刚离家，身边没了人说话，心中的孤单感觉油然而生，想找个人聊天，一边聊天一边做事，就是想找个人说说话，然而，只能在网易云音乐上听一下情感故事电台，写一下博客。
+
+是时候明确自己的目标了，现阶段的任务，默默做自己的事。
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/08/27/2017-8-27/" class="archive-article-date">
+  	<time datetime="2017-08-27T09:37:21.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-08-27</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Anconda安装openCV" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/14/Anconda安装openCV/">Anconda安装openCV</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先，到<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank" rel="external">http://www.lfd.uci.edu/~gohlke/pythonlibs/</a>下载对应Python版本的opencv包，下载到Anconda安装目录的Anaconda3-4.2.0\Lib\site-packages路径下。<br>执行安装命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install opencv_python-3.2.0-cp35-cp35m-win_amd64.whl</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/07/14/Anconda安装openCV/" class="archive-article-date">
+  	<time datetime="2017-07-14T09:17:30.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-14</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/">AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-tensorflow运行MNIST数据集NotFoundError问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -181,476 +633,9 @@
 
 
   
-    <article id="post-基于tensorflow实现自编码器" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/20/基于tensorflow实现自编码器/">基于tensorflow实现自编码器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight python"><figcaption><span>[] [AutoEncoer]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> sklearn.preprocessing <span class="keyword">as</span> prep</div><div class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</div><div class="line"><span class="keyword">from</span> tensorflow.examples.tutorials.mnist <span class="keyword">import</span> input_data</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">xavier_init</span><span class="params">(fan_in, fan_out, constant = <span class="number">1</span>)</span>:</span></div><div class="line">    low = -constant * np.sqrt(<span class="number">6.0</span> / (fan_in + fan_out))</div><div class="line">    high = constant * np.sqrt(<span class="number">6.0</span> / (fan_in + fan_out))</div><div class="line">    <span class="keyword">return</span> tf.random_uniform((fan_in, fan_out),</div><div class="line">                             minval = low, maxval = high,</div><div class="line">                             dtype = tf.float32)</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">AdditiveGaussianNoiseAutoencoder</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, n_input, n_hidden, transfer_function = tf.nn.softplus, optimizer = tf.train.AdamOptimizer<span class="params">()</span>,</span></span></div><div class="line">                 scale = <span class="number">0.1</span>):</div><div class="line">        self.n_input = n_input</div><div class="line">        self.n_hidden = n_hidden</div><div class="line">        self.transfer = transfer_function</div><div class="line">        self.scale = tf.placeholder(tf.float32)</div><div class="line">        self.training_scale = scale</div><div class="line">        network_weights = self._initialize_weights()</div><div class="line">        self.weights = network_weights</div><div class="line"></div><div class="line">        <span class="comment"># model</span></div><div class="line">        self.x = tf.placeholder(tf.float32, [<span class="keyword">None</span>, self.n_input])</div><div class="line">        self.hidden = self.transfer(tf.add(tf.matmul(self.x + scale * tf.random_normal((n_input,)),</div><div class="line">                self.weights[<span class="string">'w1'</span>]),</div><div class="line">                self.weights[<span class="string">'b1'</span>]))</div><div class="line">        self.reconstruction = tf.add(tf.matmul(self.hidden, self.weights[<span class="string">'w2'</span>]), self.weights[<span class="string">'b2'</span>])</div><div class="line"></div><div class="line">        <span class="comment"># cost</span></div><div class="line">        self.cost = <span class="number">0.5</span> * tf.reduce_sum(tf.pow(tf.subtract(self.reconstruction, self.x), <span class="number">2.0</span>))</div><div class="line">        self.optimizer = optimizer.minimize(self.cost)</div><div class="line"></div><div class="line">        init = tf.global_variables_initializer()</div><div class="line">        self.sess = tf.Session()</div><div class="line">        self.sess.run(init)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_initialize_weights</span><span class="params">(self)</span>:</span></div><div class="line">        all_weights = dict()</div><div class="line">        all_weights[<span class="string">'w1'</span>] = tf.Variable(xavier_init(self.n_input, self.n_hidden))</div><div class="line">        all_weights[<span class="string">'b1'</span>] = tf.Variable(tf.zeros([self.n_hidden], dtype = tf.float32))</div><div class="line">        all_weights[<span class="string">'w2'</span>] = tf.Variable(tf.zeros([self.n_hidden, self.n_input], dtype = tf.float32))</div><div class="line">        all_weights[<span class="string">'b2'</span>] = tf.Variable(tf.zeros([self.n_input], dtype = tf.float32))</div><div class="line">        <span class="keyword">return</span> all_weights</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">partial_fit</span><span class="params">(self, X)</span>:</span></div><div class="line">        cost, opt = self.sess.run((self.cost, self.optimizer), feed_dict = &#123;self.x: X,</div><div class="line">                                                                            self.scale: self.training_scale</div><div class="line">                                                                            &#125;)</div><div class="line">        <span class="keyword">return</span> cost</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">calc_total_cost</span><span class="params">(self, X)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.sess.run(self.cost, feed_dict = &#123;self.x: X,</div><div class="line">                                                     self.scale: self.training_scale</div><div class="line">                                                     &#125;)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">transform</span><span class="params">(self, X)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.sess.run(self.hidden, feed_dict = &#123;self.x: X,</div><div class="line">                                                       self.scale: self.training_scale</div><div class="line">                                                       &#125;)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">generate</span><span class="params">(self, hidden = None)</span>:</span></div><div class="line">        <span class="keyword">if</span> hidden <span class="keyword">is</span> <span class="keyword">None</span>:</div><div class="line">            hidden = np.random.normal(size = self.weights[<span class="string">"b1"</span>])</div><div class="line">        <span class="keyword">return</span> self.sess.run(self.reconstruction, feed_dict = &#123;self.hidden: hidden&#125;)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reconstruct</span><span class="params">(self, X)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.sess.run(self.reconstruction, feed_dict = &#123;self.x: X,</div><div class="line">                                                               self.scale: self.training_scale</div><div class="line">                                                               &#125;)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getWeights</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.sess.run(self.weights[<span class="string">'w1'</span>])</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getBiases</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.sess.run(self.weights[<span class="string">'b1'</span>])</div><div class="line">        </div><div class="line">        </div><div class="line">        </div><div class="line">        </div><div class="line">mnist = input_data.read_data_sets(<span class="string">'MNIST_data/'</span>, one_hot = <span class="keyword">True</span>)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">standard_scale</span><span class="params">(X_train, X_test)</span>:</span></div><div class="line">    preprocessor = prep.StandardScaler().fit(X_train)</div><div class="line">    X_train = preprocessor.transform(X_train)</div><div class="line">    X_test = preprocessor.transform(X_test)</div><div class="line">    <span class="keyword">return</span> X_train, X_test</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_random_block_from_data</span><span class="params">(data, batch_size)</span>:</span></div><div class="line">    start_index = np.random.randint(<span class="number">0</span>, len(data) - batch_size)</div><div class="line">    <span class="keyword">return</span> data[start_index:(start_index + batch_size)]</div><div class="line"></div><div class="line">X_train, X_test = standard_scale(mnist.train.images, mnist.test.images)</div><div class="line"></div><div class="line">n_samples = int(mnist.train.num_examples)</div><div class="line">training_epochs = <span class="number">20</span></div><div class="line">batch_size = <span class="number">128</span></div><div class="line">display_step = <span class="number">1</span></div><div class="line"></div><div class="line">autoencoder = AdditiveGaussianNoiseAutoencoder(n_input = <span class="number">784</span>,</div><div class="line">                                               n_hidden = <span class="number">200</span>,</div><div class="line">                                               transfer_function = tf.nn.softplus,</div><div class="line">                                               optimizer = tf.train.AdamOptimizer(learning_rate = <span class="number">0.001</span>),</div><div class="line">                                               scale = <span class="number">0.01</span>)</div><div class="line"></div><div class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(training_epochs):</div><div class="line">    avg_cost = <span class="number">0.</span></div><div class="line">    total_batch = int(n_samples / batch_size)</div><div class="line">    <span class="comment"># Loop over all batches</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(total_batch):</div><div class="line">        batch_xs = get_random_block_from_data(X_train, batch_size)</div><div class="line"></div><div class="line">        <span class="comment"># Fit training using batch data</span></div><div class="line">        cost = autoencoder.partial_fit(batch_xs)</div><div class="line">        <span class="comment"># Compute average loss</span></div><div class="line">        avg_cost += cost / n_samples * batch_size</div><div class="line"></div><div class="line">    <span class="comment"># Display logs per epoch step</span></div><div class="line">    <span class="keyword">if</span> epoch % display_step == <span class="number">0</span>:</div><div class="line">        print(<span class="string">"Epoch:"</span>, <span class="string">'%04d'</span> % (epoch + <span class="number">1</span>), <span class="string">"cost="</span>, <span class="string">"&#123;:.9f&#125;"</span>.format(avg_cost))</div><div class="line"></div><div class="line">print(<span class="string">"Total cost: "</span> + str(autoencoder.calc_total_cost(X_test)))</div></pre></td></tr></table></figure>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/06/20/基于tensorflow实现自编码器/" class="archive-article-date">
-  	<time datetime="2017-06-20T13:01:32.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-20</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/">AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Anconda安装tensorflow" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/20/Anconda安装tensorflow/">Anconda安装tensorflow</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>环境：Python5.3.2<br>cup版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/win/cpu/tensorflow-0.12.0rc0-cp35-cp35m-win_amd64.whl</div></pre></td></tr></table></figure></p>
-<p>gpu版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-0.12.0-cp35-cp35m-win_amd64.whl</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/06/20/Anconda安装tensorflow/" class="archive-article-date">
-  	<time datetime="2017-06-20T13:00:01.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-20</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/">AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Tmux" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/12/Tmux/">Tmux</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Tmux可用于在服务器后台运行程序</p>
-<p>创建窗口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tmux new -s &lt;name&gt;</div></pre></td></tr></table></figure></p>
-<p>进入窗口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tmux attach-session -t &lt;name&gt;</div></pre></td></tr></table></figure></p>
-<p>显示窗口列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tmux ls</div></pre></td></tr></table></figure></p>
-<p>创建对话<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Ctrl+b</div><div class="line">c</div></pre></td></tr></table></figure></p>
-<p>显示对话列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Ctrl+b</div><div class="line">w</div></pre></td></tr></table></figure></p>
-<p>退出窗口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Ctrl+b</div><div class="line">d</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/06/12/Tmux/" class="archive-article-date">
-  	<time datetime="2017-06-12T08:19:06.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-12</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-nohup命令" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/12/nohup命令/">nohup命令</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/06/12/nohup命令/" class="archive-article-date">
-  	<time datetime="2017-06-12T07:47:22.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-12</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-TabError问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/11/TabError问题/">TabError问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>运行python文件出现如下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">TabError: inconsistent use of tabs and spaces in indentation</div></pre></td></tr></table></figure></p>
-<p>这是由于在不同编辑器中使用Tab键缩进造成的<br>使用记事本或者Python自带的IDLE编辑器可看到缩进问题<br>暂时的解决方法是将出错行重新输入一遍<br>更改完后后可使用IDLE中的Check Module检查一下是否更改成功</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/06/11/TabError问题/" class="archive-article-date">
-  	<time datetime="2017-06-11T14:15:58.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-11</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-git基本操作" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/11/git基本操作/">git基本操作</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>查询日志<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git log</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/06/11/git基本操作/" class="archive-article-date">
-  	<time datetime="2017-06-11T11:15:41.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-11</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-git分支管理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/11/git分支管理/">git分支管理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>新建分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch &lt;branchname&gt;</div></pre></td></tr></table></figure></p>
-<p>切换分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout &lt;branchname&gt;</div></pre></td></tr></table></figure></p>
-<p>合并分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge &lt;branchname&gt;</div></pre></td></tr></table></figure></p>
-<p>删除分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git branch -d &lt;branchname&gt;</div><div class="line">如果该分支没有合并到主分支会报错，可以用以下命令强制删除：</div><div class="line">git branch -D &lt;branchname&gt;</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/06/11/git分支管理/" class="archive-article-date">
-  	<time datetime="2017-06-11T05:26:58.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-11</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-vim命令" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/10/vim命令/">vim命令</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p></p><h3>模式切换</h3><br>按[ESC]键使vim从文本输入模式回到命令模式。<p></p>
-<p></p><h3>编辑操作</h3><br>键|功能<br>—-|—-<br>i|在光标左侧输入正文<br>I|在光标所在行的行首输入正文<br>a|在光标右侧输入正文<br>A|在光标所在行的行尾输入正文<br>o|在光标所在行的下一行增添新行，光标位于新行的行首<br>O|在光标所在行的上一行增添新行，光标位于新行的行首<p></p>
-<p></p><h3>退出操作</h3><br>键|功能<br>—-|—-<br>:wq|保存文件，退出vim编辑器<br>:w|保存文件，但不退出vim编辑器<br>:q|退出vi编辑器<br>:q!|不保存文件，退出vim编辑器<br>zz|保存文件，退出vim编辑器<p></p>
-<table border="1"><br>    <tr><br>        <th>键</th><br>        <th>功能</th><br>    </tr><br>    <tr><br>        <td>i</td><br>        <td>在光标左侧输入正文</td><br>    </tr><br>    <tr><br>        <td>I</td><br>        <td>在光标所在行的行首输入正文</td><br>    </tr><br>    <tr><br>        <td>a</td><br>        <td>在光标右侧输入正文</td><br>    </tr><br>    <tr><br>        <td>A</td><br>        <td>在光标所在行的行尾输入正文</td><br>    </tr><br>    <tr><br>        <td>o</td><br>        <td>在光标所在行的下一行增添新行，光标位于新行的行首</td><br>    </tr><br>    <tr><br>        <td>O</td><br>        <td>在光标所在行的上一行增添新行，光标位于新行的行首</td><br>    </tr><br>    <tr><br>        <td>I</td><br>        <td></td><br>    </tr><br>    <tr><br>        <td>I</td><br>        <td></td><br>    </tr><br></table><br><table border="1"><br>    <tr><br>        <th>键</th><br>        <th>功能</th><br>    </tr><br>    <tr><br>        <td>:wq</td><br>        <td>保存文件，退出vim编辑器</td><br>    </tr><br>    <tr><br>        <td>:w</td><br>        <td>保存文件，但不退出vim编辑器</td><br>    </tr><br>    <tr><br>        <td>:q</td><br>        <td>退出vi编辑器</td><br>    </tr><br>    <tr><br>        <td>:q!</td><br>        <td>不保存文件，退出vim编辑器 </td><br>    </tr><br></table>
-
-
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/06/10/vim命令/" class="archive-article-date">
-  	<time datetime="2017-06-10T10:23:06.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-10</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="w-Markdown语法" class="article article-type-w" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/10/Markdown语法/">Markdown语法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://xianbai.me/learn-md/index.html" target="_blank" rel="external">Markdown 入门参考</a></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/06/10/Markdown语法/" class="archive-article-date">
-  	<time datetime="2017-06-10T09:05:52.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-10</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -660,7 +645,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Allen
+    		&copy; 2018 Allen
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -712,7 +697,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/AI/" style="font-size: 16.67px;">AI</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/GIS/" style="font-size: 10px;">GIS</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/学习笔记/" style="font-size: 10px;">学习笔记</a> <a href="/tags/旧事/" style="font-size: 13.33px;">旧事</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    				<a href="/tags/AI/" style="font-size: 15px;">AI</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/GIS/" style="font-size: 10px;">GIS</a> <a href="/tags/Git/" style="font-size: 12.5px;">Git</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/linux/" style="font-size: 17.5px;">linux</a> <a href="/tags/信息安全/" style="font-size: 10px;">信息安全</a> <a href="/tags/学习笔记/" style="font-size: 10px;">学习笔记</a> <a href="/tags/旧事/" style="font-size: 12.5px;">旧事</a> <a href="/tags/随笔/" style="font-size: 12.5px;">随笔</a>
     			</div>
     	</section>
     
